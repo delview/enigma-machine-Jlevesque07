@@ -3,34 +3,72 @@
 def show_messages():
     print(messages)
 
-# def send_messages():
-#     for item in messages:
-#         print(f"Message '{item}' sent. ")
-#         sent_messages.append(item)
-#     for item in messages:
-#         messages.remove(item)
-#     return sent_messages
-
-# def send_messages(sent_messages:list):
-#     global messages
-#     while messages:
-#         item = messages.pop(0)
-#         print(item)
-#         sent_messages.append(item)
+def send_messages(sent_messages:list):
+    while messages:
+        item = messages.pop(0)
+        print(item)
+        sent_messages.append(item)
    
-#     return sent_messages
+    return sent_messages
+
+def sandwich(items: list) -> list:
+    print(f"The toppings on this sandwich will be: {items}. ")
+
+
 
 messages = []
 sent_messages = []
 messages.append("You're done.")
 messages.append("You look like a gnome.")
 messages.append("Computer class.")
-send_messages()
+send_messages(sent_messages)
 print(messages, sent_messages)
 
+sandwiches = 3
+while sandwiches > 0:
+    if sandwiches == 3:
+        sandwich_1 = []
+        while True:
+            topping = input("What topping do you want on your sandwich? ").strip().lower()
+            sandwich_1.append(topping)
+            exit = input("Would you like to choose another topping? ").strip().lower()
+            if exit == "y":
+                pass
+            else: 
+                sandwich(sandwich_1)
+                sandwiches = sandwiches - 1
+                break
+
+    elif sandwiches == 2:
+        sandwich_2 = []
+        while True:
+            topping = input("What topping do you want on your sandwich? ").strip().lower()
+            sandwich_2.append(topping)
+            exit = input("Would you like to choose another topping? ").strip().lower()
+            if exit == "y":
+                pass
+            else: 
+                sandwich(sandwich_2)
+                sandwiches = sandwiches - 1
+                break
+
+    if sandwiches == 1:
+        sandwich_3 = []
+        while True:
+            topping = input("What topping do you want on your sandwich? ").strip().lower()
+            sandwich_3.append(topping)
+            exit = input("Would you like to choose another topping? ").strip().lower()
+            if exit == "y":
+                pass
+            else: 
+                sandwich(sandwich_3)
+                sandwiches = sandwiches - 1
+                break
+        
+        
+        
 
 
-# 3. Write a function that accepts a list of items a person wants on a sandwich. 
-# The function should have one parameter that collects as many items as the function call provides and it should print a summary of the sandwich that's being ordered. '
-# 'Call the function three times using a different number of arguments each time.
+
+
 
