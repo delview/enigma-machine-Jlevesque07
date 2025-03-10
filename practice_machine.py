@@ -52,7 +52,7 @@ while sandwiches > 0:
                 sandwiches = sandwiches - 1
                 break
 
-    if sandwiches == 1:
+    else:
         sandwich_3 = []
         while True:
             topping = input("What topping do you want on your sandwich? ").strip().lower()
