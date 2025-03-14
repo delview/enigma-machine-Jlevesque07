@@ -9,10 +9,7 @@
 # def decoder function 
 # takes a list of morse codes, translates them into letters, regroups the letters into a string, shows the user the string
 
-import time
 
-print("Yeti")
+# define dictionary for morse code to letter translations
 
-time.sleep(1)
-
-print("RAh")
+# user interface, options to encode or decode
