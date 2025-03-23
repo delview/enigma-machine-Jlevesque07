@@ -59,7 +59,11 @@ def encode(string: str) -> list:
             encoded_message.append("-.--")
         elif letter == 'z':                      
             encoded_message.append("--..")
+        else:
+            encoded_message.append("----")
     print(encoded_message)
+
+    
 # def decoder function 
 # takes a list of morse codes, translates them into letters, regroups the letters into a string, shows the user the string
 
