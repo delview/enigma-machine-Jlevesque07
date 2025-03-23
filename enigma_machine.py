@@ -18,9 +18,9 @@ def encode(string: str) -> list:
         elif letter == 'e':
             encoded_message.append(".")
         elif letter == 'f':
-            encoded_message.append("--.")
+            encoded_message.append("..-.")
         elif letter == 'g':
-            encoded_message.append("-...")
+            encoded_message.append("--.")
         elif letter == 'h':
             encoded_message.append("....")
         elif letter == 'i':
@@ -125,7 +125,7 @@ def decode(list: str) -> str:
         else:
             decoded_message.append(" ")
     decoded_message = ''.join(decoded_message)
-    decoded_message = (decoded_message).title()
+    decoded_message = (decoded_message)
     print(decoded_message)
 
 
