@@ -63,12 +63,73 @@ def encode(string: str) -> list:
             encoded_message.append("----")
     print(encoded_message)
 
-    
+
 # def decoder function 
 # takes a list of morse codes, translates them into letters, regroups the letters into a string, shows the user the string
-
+def decode(list: list) -> str:
+    decoded_message = []
+    for code in list:
+        if code == ".-":
+            decoded_message.append("a")
+        elif code == "-...":
+            decoded_message.append("b")
+        elif code == "-.-.":
+            decoded_message.append("c")
+        elif code == "-..":
+            decoded_message.append("d")
+        elif code == ".":
+            decoded_message.append("e")
+        elif code == "..-.":
+            decoded_message.append("f")
+        elif code == "--.":
+            decoded_message.append("g")
+        elif code == "....":
+            decoded_message.append("h")
+        elif code == "..":
+            decoded_message.append("i")
+        elif code == ".---":
+            decoded_message.append("j")
+        elif code == "-.-":
+            decoded_message.append("k")
+        elif code == ".-..":
+            decoded_message.append("l")
+        elif code == "--":
+            decoded_message.append("m")
+        elif code == "-.":
+            decoded_message.append("n")
+        elif code == "---":
+            decoded_message.append("o")
+        elif code == ".--.":
+            decoded_message.append("p")
+        elif code == "--.-":
+            decoded_message.append("q")
+        elif code == ".-.":
+            decoded_message.append("r")
+        elif code == "...":
+            decoded_message.append("s")
+        elif code == "-":
+            decoded_message.append("t")
+        elif code == "..-":
+            decoded_message.append("u")
+        elif code == "...-":
+            decoded_message.append("v")
+        elif code == ".--":
+            decoded_message.append("w")
+        elif code == "-..-":
+            decoded_message.append("x")
+        elif code == "-.--":
+            decoded_message.append("y")
+        elif code == "--..":
+            decoded_message.append("z")
+        else:
+            decoded_message.append(" ")
+    decoded_message = ''.join(decoded_message)
+    decoded_message = (decoded_message).title()
+    print(decoded_message)
 
 # define dictionary for morse code to letter translations
 string = input("Input a message. ")
 encode(string)
+
+list = input[]
 # user interface, options to encode or decode
