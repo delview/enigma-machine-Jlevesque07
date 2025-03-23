@@ -61,12 +61,13 @@ def encode(string: str) -> list:
             encoded_message.append("--..")
         else:
             encoded_message.append("----")
+    encoded_message = ' '.join(encoded_message)
     print(encoded_message)
 
 
 # def decoder function 
 # takes a list of morse codes, translates them into letters, regroups the letters into a string, shows the user the string
-def decode(list: list) -> str:
+def decode(list: str) -> str:
     decoded_message = []
     for code in list:
         if code == ".-":
@@ -127,9 +128,11 @@ def decode(list: list) -> str:
     decoded_message = (decoded_message).title()
     print(decoded_message)
 
-# define dictionary for morse code to letter translations
-string = input("Input a message. ")
+
+# user interface, options to encode or decode
+string = input("Input a message. ").lower()
 encode(string)
 
-list = input[]
-# user interface, options to encode or decode
+list = input("Please enter an encoded message. ")
+list = list.split()
+decode(list)
