@@ -1,12 +1,8 @@
-
-
-
-
 # def encoder function 
-# takes the string, makes it a list, translates each letter into morse code, shows the user the encoded message
-def encode(string: str) -> list:
+def encode(string: str) -> list: # takes the string, makes it a list
+
     encoded_message = []
-    for letter in string:
+    for letter in string: # translates each letter into morse code
         if letter == 'a':
             encoded_message.append(".-")
         elif letter == 'b':  
@@ -62,14 +58,15 @@ def encode(string: str) -> list:
         else:
             encoded_message.append("----")
     encoded_message = ' '.join(encoded_message)
-    print(encoded_message)
+    print(f"Your encoded message: {encoded_message}") # shows the user the encoded message
+
 
 
 # def decoder function 
-# takes a list of morse codes, translates them into letters, regroups the letters into a string, shows the user the string
-def decode(list: str) -> str:
+def decode(list: str) -> str: # # takes a list of morse codes
+    
     decoded_message = []
-    for code in list:
+    for code in list: # translates them into letters
         if code == ".-":
             decoded_message.append("a")
         elif code == "-...":
@@ -125,24 +122,26 @@ def decode(list: str) -> str:
         else:
             decoded_message.append(" ")
 
-    decoded_message = ''.join(decoded_message)
-    print(decoded_message)
+    decoded_message = ''.join(decoded_message) # regroups the letters into a string
+    print(f"Your decoded message: {decoded_message}.") # shows the user the string
 
 
-# user interface, options to encode or decode
+
+
+# user interface
 while True: 
     option = input("Would you like to encode a message [1]? Decode a message [2]? Or exit the program [3]? ").strip().lower()
         
-    if option == "1":
+    if option == "1": # option to encode
         string = input("Input a message to be encoded. ").lower()
         encode(string)
 
-    elif option == "2":
+    elif option == "2": # option to decode
         list = input("Please enter an encoded message to be decoded. ")
         list = list.split()
         decode(list)
 
-    elif option == "3":
+    elif option == "3": # option to quit
         print("Thank you for using my program. Have a good day. ")
         exit()
 
