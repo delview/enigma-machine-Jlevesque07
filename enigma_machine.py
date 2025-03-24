@@ -124,15 +124,27 @@ def decode(list: str) -> str:
             decoded_message.append("z")
         else:
             decoded_message.append(" ")
+
     decoded_message = ''.join(decoded_message)
-    decoded_message = (decoded_message)
     print(decoded_message)
 
 
 # user interface, options to encode or decode
-string = input("Input a message. ").lower()
-encode(string)
+while True: 
+    option = input("Would you like to encode a message [1]? Decode a message [2]? Or exit the program [3]? ").strip().lower()
+        
+    if option == "1":
+        string = input("Input a message to be encoded. ").lower()
+        encode(string)
 
-list = input("Please enter an encoded message. ")
-list = list.split()
-decode(list)
+    elif option == "2":
+        list = input("Please enter an encoded message to be decoded. ")
+        list = list.split()
+        decode(list)
+
+    elif option == "3":
+        print("Thank you for using my program. Have a good day. ")
+        exit()
+
+    else:
+        print("Please enter either 1, 2, or 3.")
